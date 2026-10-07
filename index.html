@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <h1>My Budget Tracker</h1>
+        <p>Track your spending, stay on top of your goals, and manage your monthly budget with ease.</p>
+      </header>
+
+      <main>
+        <section class="summary-panel" id="budget-summary">
+          <h2>Monthly Summary</h2>
+          <div class="summary-cards">
+            <div class="card income">
+              <span class="label">Income</span>
+              <strong>$3,200</strong>
+            </div>
+            <div class="card expenses">
+              <span class="label">Expenses</span>
+              <strong>$1,860</strong>
+            </div>
+            <div class="card balance">
+              <span class="label">Balance</span>
+              <strong>$1,340</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="entry-panel form-panel">
+          <h2>Add Expense</h2>
+
+          <form id="expense-form" method="post">
+            <div class="field-group">
+              <label for="expense-name">Expense Name</label>
+              <input id="expense-name" name="expense-name" type="text" placeholder="Groceries" />
+            </div>
+
+            <div class="field-group">
+              <label for="expense-amount">Amount</label>
+              <input id="expense-amount" name="expense-amount" type="number" min="0" step="0.01" placeholder="0.00" />
+            </div>
+
+            <div class="field-group">
+              <label for="expense-category">Category</label>
+              <select id="expense-category" name="expense-category">
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="housing">Housing</option>
+                <option value="utilities">Utilities</option>
+                <option value="entertainment">Entertainment</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="expense-date">Date</label>
+              <input id="expense-date" name="expense-date" type="date" />
+            </div>
+
+            <button type="submit">Save Expense</button>
+          </form>
+        </section>
+
+        <section class="entry-panel table-panel">
+          <h2>Expense Log</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Expense</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Groceries</td>
+                <td>Food</td>
+                <td>$120.50</td>
+                <td>2026-10-05</td>
+              </tr>
+              <tr>
+                <td>Bus Pass</td>
+                <td>Transport</td>
+                <td>$45.00</td>
+                <td>2026-10-06</td>
+              </tr>
+              <tr>
+                <td>Electricity</td>
+                <td>Utilities</td>
+                <td>$68.20</td>
+                <td>2026-10-04</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="media-panel">
+          <h2>Helpful Budget Resources</h2>
+
+          <div class="media-grid">
+            <div class="media-card">
+              <img
+                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80"
+                alt="Financial planning and budgeting concept"
+                width="600"
+                height="400"
+              />
+            </div>
+
+            <div class="media-card">
+              <iframe
+                src="https://www.youtube.com/embed/9m_C2L2qfDI?si=2K7dYb6mkdhqA7NA"
+                title="Smart budgeting tips video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
